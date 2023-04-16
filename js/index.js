@@ -64,7 +64,7 @@ const handleButtons = () => {
         }
         if (e.target.matches('#decrypt')) {
             decrypt(removeTildes($textarea.value.trim().toLowerCase()))
-
+            handleOutputSection($textarea.value)
         }
         if (e.target.matches('#copy')) {
             handleCopy()
