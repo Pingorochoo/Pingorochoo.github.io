@@ -31,27 +31,28 @@
               >solo letras minúscular y sin acentos.</span
             >
             <div class="options">
-              <button class="option encrypt capitalize-first">encriptar</button>
-              <button class="option decrypt capitalize-first">
+              <button class="option encrypt capitalize-first" id="encrypt">
+                encriptar
+              </button>
+              <button class="option decrypt capitalize-first" id="decrypt">
                 desencriptar
               </button>
             </div>
           </div>
           <div class="output-section">
             <div class="output-empty">
-              <img src="/assets/svg/muneco.svg" alt="muneco alura" class="muneco">
+              <img
+                src="/assets/svg/muneco.svg"
+                alt="muneco alura"
+                class="muneco"
+              />
               <p>Ningún mensaje fue encontrado</p>
               <p>Ingresa el texto que desees encriptar o desencriptar.</p>
             </div>
-            <p class="output not-show">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum,
-              beatae sapiente? Similique vel eaque totam natus officia? Commodi,
-              doloremque nam incidunt architecto sunt est ut saepe earum, alias,
-              iure quam.fasdfasdf e sapiente? Similique vel eaque totam natus
-              officia? Commodi, doloremque nam incidunt architecto sunt est ut
-              saepe earum, alias, iure quam.fasdfasdf
-            </p>
-            <button class="copy not-show">copiar</button>
+            <div class="output-response hide">
+              <p class="output" id="output"></p>
+              <button class="copy" id="copy">copiar</button>
+            </div>
           </div>
         </div>
       </div>
