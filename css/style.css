@@ -41,20 +41,22 @@ body {
     padding: 2.4rem 1.6rem 4rem 1.6rem;
     min-height: inherit;
 }
+
 @media (min-width: 768px) {
     .section {
         padding: 7.342rem 4rem 4rem 4rem;
     }
 }
+
 @media (min-width: 1024px) {
     .section {
         padding: 4rem;
     }
 }
+
 .capitalize-first::first-letter {
     text-transform: uppercase;
 }
-
 
 .main-grid {
     display: grid;
@@ -62,13 +64,22 @@ body {
     gap: 6.4rem;
     min-height: 100vh;
 }
+
+@media (min-width: 768px) {
+    .main-grid {
+        min-height: calc(100vh - 11.342rem);
+    }
+}
+
 @media (min-width: 1024px) {
     .main-grid {
         grid-template-rows: unset;
         grid-template-columns: 5fr 2fr;
+        min-height: calc(100vh - 8rem);
         gap: 8rem;
     }
 }
+
 .input-section {
     display: flex;
     flex-direction: column;
@@ -184,10 +195,25 @@ body {
 
 .output-section .output-empty {
     text-align: center;
-    display: flex;
-    gap: 1.6rem;
-    flex-direction: column;
-    justify-content: space-between;
+}
+
+.output-section .output-empty .muneco {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .output-section .output-empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto 0;
+        height: 100%;
+
+    }
+
+    .output-section .output-empty .muneco {
+        display: block;
+    }
 }
 
 .output-section .output-empty p {}
@@ -195,6 +221,7 @@ body {
 .output-section .output-empty p:first-of-type {
     font-weight: 700;
     line-height: 2.88rem;
+    margin-bottom: 1.6rem;
 }
 
 .output-section .output-empty p:last-of-type {
