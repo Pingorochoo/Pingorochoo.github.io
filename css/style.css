@@ -1,0 +1,236 @@
+:root {
+    --light-blue-100: #F3F5FC;
+    --light-blue-200: #EFF1FA;
+    --light-blue-300: #E9ECF8;
+    --dark-blue-200: #356EA9;
+    --dark-blue-300: #0A3871;
+    --dark-blue-400: #072B61;
+    --gray-400: #495057;
+    --gray-500: #343A40;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+.encrypter {
+    background-color: var(--light-blue-100);
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 2.4rem 1.6rem 4rem 1.6rem;
+    min-height: inherit;
+}
+@media (min-width: 768px) {
+    .section {
+        padding: 7.342rem 4rem 4rem 4rem;
+    }
+}
+@media (min-width: 1024px) {
+    .section {
+        padding: 4rem;
+    }
+}
+.capitalize-first::first-letter {
+    text-transform: uppercase;
+}
+
+
+.main-grid {
+    display: grid;
+    grid-template-rows: 1fr min-content;
+    gap: 6.4rem;
+    min-height: 100vh;
+}
+@media (min-width: 1024px) {
+    .main-grid {
+        grid-template-rows: unset;
+        grid-template-columns: 5fr 2fr;
+        gap: 8rem;
+    }
+}
+.input-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-section .heading {
+    display: block;
+    margin-bottom: 8rem;
+}
+
+.input-section .heading .alura-logo {}
+
+.input-section .input-container {
+    min-height: 26.5rem;
+    flex-grow: 1;
+}
+
+.input-section .input-container .input {
+    border: none;
+    outline: none;
+    background-color: var(--light-blue-100);
+    color: var(--dark-blue-300);
+    resize: none;
+    height: auto;
+    width: 100%;
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+}
+
+.input-section .input-container .input::placeholder {
+    color: var(--dark-blue-300);
+}
+
+.input-section .input-advice {
+    display: block;
+    position: relative;
+    padding: .5rem;
+    padding-left: 2.4rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: var(--gray-400);
+}
+
+.input-section .input-advice::before {
+    content: '';
+    position: absolute;
+    background-image: url(/assets//svg//icono-interrogacion.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    top: .3rem;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+
+.options .option {
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.options .option.encrypt {
+    background-color: var(--dark-blue-300);
+    color: var(--light-blue-100)
+}
+
+.options .option.encrypt:hover {
+    background-color: var(--dark-blue-400);
+}
+
+@media (min-width: 768px) {
+    .options {
+        flex-direction: row;
+    }
+
+    .options .option {
+        flex-grow: 1;
+    }
+}
+
+.options .option.decrypt {
+    background-color: transparent;
+    border: solid 1px var(--dark-blue-300);
+    color: var(--dark-blue-300)
+}
+
+.options .option.decrypt:hover {
+    background-color: var(--light-blue-300);
+    color: var(--dark-blue-200);
+    border-color: var(--dark-blue-200);
+}
+
+/* output-section */
+.output-section {
+    border-radius: 3.2rem;
+    /* min-height: 18.6rem; */
+    background-color: white;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    padding: 3.2rem;
+    color: var(--gray-500);
+    font-size: 24px;
+}
+
+.output-section .output-empty {
+    text-align: center;
+    display: flex;
+    gap: 1.6rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.output-section .output-empty p {}
+
+.output-section .output-empty p:first-of-type {
+    font-weight: 700;
+    line-height: 2.88rem;
+}
+
+.output-section .output-empty p:last-of-type {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2.4rem;
+    color: var(--gray-400);
+
+}
+
+.output-section .output {
+    color: var(--gray-400);
+    line-height: 3.6rem;
+    margin-bottom: 3.2rem;
+}
+
+.output-section .copy {
+    display: block;
+    width: 100%;
+    padding: 2.4rem;
+    border-radius: 2.4rem;
+    border: none;
+    background-color: transparent;
+    border: solid 1px var(--dark-blue-300);
+    color: var(--dark-blue-300);
+    cursor: pointer;
+    transition-property: background-color;
+    transition-duration: .3s;
+}
+
+.output-section .copy:hover {
+    background-color: #eee;
+    color: var(--dark-blue-200);
+    border-color: var(--dark-blue-200);
+}
+
+.output-section .not-show {
+    display: none;
+}
