@@ -1,6 +1,5 @@
 const $inputAdvice = document.querySelector(".input-advice");
-console.log($inputAdvice);
-const regex = /[^a-z]/;
+const regex = /[^a-z\s,\.;:\-_{}\[\]´¨+\*'?!¡¿\(\)]/;
 const isValid = (value) => {
   return !regex.test(value);
 };
