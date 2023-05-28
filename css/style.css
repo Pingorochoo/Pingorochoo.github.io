@@ -148,7 +148,7 @@ body {
   background-color: var(--light-blue-100);
   color: var(--dark-blue-300);
   resize: none;
-  height: auto;
+  height: 100%;
   width: 100%;
   font-size: 3.2rem;
   line-height: 4.8rem;
